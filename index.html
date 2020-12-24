@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/favicon.png" type="image/x-icon" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000000" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script type="module" src="js/main.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
+      rel="stylesheet"
+    />
+    <title>RW - ¿Cuantas burgers quedan?</title>
+  </head>
+  <body class="container">
+    <h1>¿Cuantas burgers quedan? 🍔</h1>
+    <div id="big-container" class="container-frase">
+			<div id="loading" class="loading-container">
+				<div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+			</div>
+			<div id="number_container" class="number-container"></div>
+			<div id="frase_text" class="frase-container"></div>
+    </div>
+    <div id="links" class="links-container">
+      <div class="contact-link">
+        <a href="https://www.rwrestaurante.com/" class="nav-link">
+          <svg class="svg-icon-link" viewBox="0 0 20 20">
+            <path
+              d="M17.237,3.056H2.93c-0.694,0-1.263,0.568-1.263,1.263v8.837c0,0.694,0.568,1.263,1.263,1.263h4.629v0.879c-0.015,0.086-0.183,0.306-0.273,0.423c-0.223,0.293-0.455,0.592-0.293,0.92c0.07,0.139,0.226,0.303,0.577,0.303h4.819c0.208,0,0.696,0,0.862-0.379c0.162-0.37-0.124-0.682-0.374-0.955c-0.089-0.097-0.231-0.252-0.268-0.328v-0.862h4.629c0.694,0,1.263-0.568,1.263-1.263V4.319C18.5,3.625,17.932,3.056,17.237,3.056 M8.053,16.102C8.232,15.862,8.4,15.597,8.4,15.309v-0.89h3.366v0.89c0,0.303,0.211,0.562,0.419,0.793H8.053z M17.658,13.156c0,0.228-0.193,0.421-0.421,0.421H2.93c-0.228,0-0.421-0.193-0.421-0.421v-1.263h15.149V13.156z M17.658,11.052H2.509V4.319c0-0.228,0.193-0.421,0.421-0.421h14.308c0.228,0,0.421,0.193,0.421,0.421V11.052z"
+            ></path>
+          </svg>
+          <span class="link-text"
+            >Visítanos
+            <p>rwrestaurante.com</p></span
+          >
+        </a>
+      </div>
+      <div class="contact-link">
+        <a
+          href="https://www.facebook.com/rwrestaurante/"
+          class="nav-link"
+          target="_blank"
+        >
+          <svg class="svg-icon-link" viewBox="0 0 20 20">
+            <path
+              fill="none"
+              d="M10,0.5c-5.247,0-9.5,4.253-9.5,9.5c0,5.247,4.253,9.5,9.5,9.5c5.247,0,9.5-4.253,9.5-9.5C19.5,4.753,15.247,0.5,10,0.5 M10,18.637c-4.77,0-8.636-3.867-8.636-8.637S5.23,1.364,10,1.364S18.637,5.23,18.637,10S14.77,18.637,10,18.637 M10.858,7.949c0-0.349,0.036-0.536,0.573-0.536h0.719v-1.3H11c-1.38,0-1.866,0.65-1.866,1.743v0.845h-0.86V10h0.86v3.887h1.723V10h1.149l0.152-1.299h-1.302L10.858,7.949z"
+            ></path>
+          </svg>
+          <span class="link-text"
+            >Facebook
+            <p>facebook.com/rwrestaurante</p></span
+          >
+        </a>
+      </div>
+      <div class="contact-link">
+        <a
+          href="https://www.instagram.com/rwrestaurante/"
+          class="nav-link"
+          target="_blank"
+        >
+          <svg class="svg-icon-link" viewBox="0 0 20 20">
+            <path
+              fill="none"
+              d="M9.969,0.594c-5.195,0-9.406,4.211-9.406,9.406c0,5.195,4.211,9.406,9.406,9.406c5.195,0,9.406-4.211,9.406-9.406C19.375,4.805,15.164,0.594,9.969,0.594 M9.969,18.552c-4.723,0-8.551-3.829-8.551-8.552s3.829-8.551,8.551-8.551S18.521,5.277,18.521,10S14.691,18.552,9.969,18.552 M12.534,5.724H7.403c-0.944,0-1.71,0.766-1.71,1.71v5.131c0,0.944,0.766,1.71,1.71,1.71h5.131c0.944,0,1.71-0.766,1.71-1.71V7.435C14.244,6.49,13.479,5.724,12.534,5.724M11.679,7.007h1.283V8.29h-1.283V7.007z M9.969,8.29c0.944,0,1.71,0.766,1.71,1.71s-0.766,1.71-1.71,1.71s-1.71-0.766-1.71-1.71S9.024,8.29,9.969,8.29 M13.39,12.565c0,0.472-0.384,0.854-0.855,0.854H7.403c-0.472,0-0.855-0.383-0.855-0.854V9.573h0.898C7.423,9.712,7.403,9.854,7.403,10c0,1.417,1.149,2.565,2.565,2.565c1.416,0,2.565-1.148,2.565-2.565c0-0.146-0.02-0.288-0.043-0.427h0.898V12.565z"
+            ></path>
+          </svg>
+          <span class="link-text"
+            >Instagram
+            <p>instagram.com/rwrestaurante</p></span
+          >
+        </a>
+      </div>
+    </div>
+    <div id="logo" class="logo-container"></div>
+  </body>
+</html>
