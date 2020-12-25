@@ -51,6 +51,7 @@ function showErrorMessage(error) {
 // Parse incoming dat and show it in the DOM
 function showNumberOfBurgers(data) {
 	let burgerMade = 50 - data.number_burgers;
+	if (burgerMade < 0) {burgerMade = 0;}
 	loader.remove();
 	let numberSpan = document.createElement('span');
 	numberSpan.innerText = `${burgerMade}`;
