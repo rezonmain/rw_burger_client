@@ -13,8 +13,9 @@ function showNumberOfBurgsers(data) {
 	let numberSpan = document.createElement('span');
 	numberSpan.innerText = `${burgerMade}`;
 	let adTextSpan = document.createElement('span');
-	adTextSpan.innerText = "¡Asi que apresurate a pedir!"
 	document.getElementById('number_container').appendChild(numberSpan);
-	document.getElementById('frase_text').appendChild(adTextSpan);
 
 }
+
+// Todo implement function that saves data from api to local storage
+// to use cache data instead of making request everytime
