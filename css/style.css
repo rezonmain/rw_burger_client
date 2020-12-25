@@ -591,6 +591,7 @@ h1 {
     background-repeat: no-repeat;
     background-size: contain;
 }
+
 .txt-container {
     display: flex;
     flex-flow: column nowrap;
@@ -628,24 +629,29 @@ h1 {
     align-self: center;
 }
 
-.social-links {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 1rem;
-    padding-right: 1rem;
-}
 
 @media only screen and (max-width: 768px) {
-    .link-text {
-        display: none;
-    }
-
     .svg-icon-link {
         width: 5rem;
         height: 5rem;
     }
+
+    .contact-link {
+      margin: 2rem 0;
+    }
+    .outside-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .links-container {
+      margin: auto;
+      height: auto;
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: baseline;
+      justify-self: center;
+  }
 
     .img-container {
         -moz-user-select: none;
@@ -653,7 +659,7 @@ h1 {
         cursor: default;
     }
     .container-frase {
-        height: 40vh;
+        height: 20vh;
     }
 
     h1 {
