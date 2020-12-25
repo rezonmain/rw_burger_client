@@ -68,5 +68,5 @@ function readFromCache(url) {
 	return JSON.parse(localStorage.getItem(url)) || null;
 }
 
-let u = 'http://localhost:1337';
+let u = 'https://redwagon-api.herokuapp.com/number';
 getNumberOfBurgers(u);
