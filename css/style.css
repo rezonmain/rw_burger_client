@@ -569,7 +569,7 @@ h1 {
     align-self: center;
     justify-self: center;
     font-family: "Anton", sans-serif;
-    font-size: 5rem;
+    font-size: 6rem;
 }
 
 .error-container {
@@ -580,6 +580,15 @@ h1 {
     justify-self: center;
     font-size: 1.5rem;
     color: var(--background-red);
+}
+
+.date-container {
+  padding-top: 2rem;
+  font-family: Helvetica, sans-serif;
+  text-align: center;
+  display: flex;
+  font-size: 1.5rem;
+  color: #000;
 }
 
 .logo-container {
@@ -645,6 +654,8 @@ h1 {
     }
 
     .links-container {
+      -moz-user-select: none;
+      -webkit-user-select: none;
       margin: auto;
       height: auto;
       display: flex;
@@ -660,6 +671,7 @@ h1 {
     }
     .container-frase {
         height: 20vh;
+        margin-bottom: 10rem;
     }
 
     h1 {

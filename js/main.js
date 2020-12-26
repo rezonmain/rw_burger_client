@@ -1,4 +1,6 @@
 // Object to handle the loader animation stuff
+import { getFullMonthSpanish, getNameDaySpanish } from './dateSpanish.js';
+
 const loader = {
 	element: document.getElementById('loading'),
 	remove() {
@@ -56,6 +58,7 @@ function showNumberOfBurgers(data) {
 	let numberSpan = document.createElement('span');
 	numberSpan.innerText = `${burgerMade}`;
 	document.getElementById('number_container').appendChild(numberSpan);
+	showDate();
 }
 
 // Utility function to save to localstorage
@@ -69,5 +72,18 @@ function readFromCache(url) {
 	return JSON.parse(localStorage.getItem(url)) || null;
 }
 
+function showDate() {
+	let d = new Date();
+	let day = getNameDaySpanish(d.getDay()).toLowerCase(); ;
+	let date = d.getDate().toString()
+	let month = getFullMonthSpanish(d.getMonth()).toLowerCase();
+	let year = d.getFullYear().toString(); 
+	let hour = d.getHours().toString(); 
+	let minute = d.getMinutes().toString(); 
+	let dateSpan = document.createElement('span');
+	dateSpan.innerText = 'a '+ day + ' ' + date + ' de ' + month + ' del ' + year + ' ' + hour + ':' + minute + ' 📅';
+	document.getElementById('date_text').appendChild(dateSpan);
+	console.log(day + ' ' + date + ' de ' + month + ' del ' + year + ' ' + hour + ':' + minute);
+}
 let u = 'https://redwagon-api.herokuapp.com/number';
 getNumberOfBurgers(u);
