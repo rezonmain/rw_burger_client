@@ -79,7 +79,8 @@ function showDate() {
 	let month = getFullMonthSpanish(d.getMonth()).toLowerCase();
 	let year = d.getFullYear().toString(); 
 	let hour = d.getHours().toString(); 
-	let minute = d.getMinutes().toString(); 
+	let minute = d.getMinutes().toString();
+	if (minute.length === 1) {minute = '0' + minute;}
 	let dateSpan = document.createElement('span');
 	dateSpan.innerText = 'a '+ day + ' ' + date + ' de ' + month + ' del ' + year + ' ' + hour + ':' + minute + ' 📅';
 	document.getElementById('date_text').appendChild(dateSpan);
