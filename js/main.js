@@ -12,7 +12,6 @@ const loader = {
 // This is to avoid unnecesary request each time user refreshes page
 function getNumberOfBurgers(url) {
 	if (readFromCache(url) === null || Date.now() - readFromCache(url).timestamp >= 10000) {
-		console.log("Got it from API");
 		fetch(url)
 		.then(handleBadResponse) // Returns a promise with an error witch is handle in the .catch() method
 		.then(response => response.json()) // Returns the response parsed to JSON
@@ -22,7 +21,6 @@ function getNumberOfBurgers(url) {
 		.catch(showErrorMessage) 
 	}
 	else if (readFromCache(url) !== null){
-		console.log("Got it from cache")
 		showNumberOfBurgers(readFromCache(url));
 	}
 }
@@ -84,7 +82,6 @@ function showDate() {
 	let dateSpan = document.createElement('span');
 	dateSpan.innerText = 'a '+ day + ' ' + date + ' de ' + month + ' del ' + year + ' ' + hour + ':' + minute + ' 📅';
 	document.getElementById('date_text').appendChild(dateSpan);
-	console.log(day + ' ' + date + ' de ' + month + ' del ' + year + ' ' + hour + ':' + minute);
 }
 let u = 'https://redwagon-api.herokuapp.com/number';
 getNumberOfBurgers(u);
