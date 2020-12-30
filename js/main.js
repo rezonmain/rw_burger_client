@@ -91,5 +91,10 @@ function showSidenote() {
 }
 
 // When in development send request to local dev server
-let u = window.location.host === ('127.0.0.1:5500' || '192.168.0.9:5000') ? 'http://192.168.0.9:5000/number' : 'https://redwagon-api.herokuapp.com/number';
+let u;
+if (window.location.host === '127.0.0.1:5500' || window.location.host === '192.168.0.9:5500') {
+	u = 'http://192.168.0.9:5000/number';
+} else {
+	u = 'https://redwagon-api.herokuapp.com/number';
+}
 getNumberOfBurgers(u);
