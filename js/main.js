@@ -54,7 +54,7 @@ function showNumberOfBurgers(data) {
 	let numberSpan = document.createElement('span');
 	numberSpan.innerText = `${burgerMade}`;
 	document.getElementById('number_container').appendChild(numberSpan);
-	showDate();
+	showDate(data.timestamp);
 	showSidenote();
 }
 
@@ -69,8 +69,9 @@ function readFromCache(url) {
 	return JSON.parse(localStorage.getItem(url)) || null;
 }
 
-function showDate() {
-	let d = new Date();
+function showDate(ts) {
+	console.log('Passed to showDate: ' + ts.toString());
+	let d = new Date(ts);
 	let day = getNameDaySpanish(d.getDay()).toLowerCase();
 	let date = d.getDate().toString();
 	let month = getFullMonthSpanish(d.getMonth()).toLowerCase();
