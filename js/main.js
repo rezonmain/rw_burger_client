@@ -70,7 +70,6 @@ function readFromCache(url) {
 }
 
 function showDate(ts) {
-	console.log('Passed to showDate: ' + ts.toString());
 	let d = new Date(ts);
 	let day = getNameDaySpanish(d.getDay()).toLowerCase();
 	let date = d.getDate().toString();
