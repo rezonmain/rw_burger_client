@@ -71,7 +71,7 @@ function readFromCache(url) {
 
 function showDate(ts) {
 	let d = new Date(ts);
-	let day = getNameDaySpanish(d.getDay()).toLowerCase();
+	let day = getNameDaySpanish(d.getDay()); // .toLowerCase();
 	let date = d.getDate().toString();
 	let month = getFullMonthSpanish(d.getMonth()).toLowerCase();
 	let year = d.getFullYear().toString();
@@ -81,7 +81,7 @@ function showDate(ts) {
 		minute = '0' + minute;
 	}
 	let dateSpan = document.createElement('span');
-	dateSpan.innerText = 'a ' + day + ' ' + date + ' de ' + month + ' del ' + year + ' ' + hour + ':' + minute + ' 📅';
+	dateSpan.innerText = day + ' ' + date + ' de ' + month + ' del ' + year + ' ' + hour + ':' + minute + ' 📅';
 	document.getElementById('date_text').appendChild(dateSpan);
 }
 
