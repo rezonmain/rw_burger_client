@@ -629,7 +629,7 @@ h1 {
 
 .container-frase {
 	width: auto;
-	height: 30vh;
+	height: 280px;
 	/* box-shadow: var(--shadows); */
 	display: flex;
 	flex-flow: column nowrap;
