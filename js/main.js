@@ -12,7 +12,7 @@ function handleClosedHours() {
 		dom.showWeAreClosedToday();
 		return;
 		// Show we are closed message if we are outside of working hours (2pm - 9pm)
-	} else if (localTime.hour >= closingHour && localTime.hour < openingHour) {
+	} else if (!(localTime.hour >= openingHour && localTime.hour < closingHour)) {
 		dom.showWeAreClosed();
 		return;
 		// Monday night, restaurant opens untill thursday
