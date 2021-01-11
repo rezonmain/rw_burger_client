@@ -714,6 +714,15 @@ h1 {
 	color: var(--background-red);
 }
 
+.closed-container {
+	margin-top: 1rem;
+	text-align: center;
+	display: flex;
+	align-self: center;
+	justify-self: center;
+	font-size: 2rem;
+}
+
 .date-container {
 	padding-top: 2rem;
 	font-family: Helvetica, sans-serif;
