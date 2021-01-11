@@ -2,6 +2,7 @@
 import { readFromCache, writeToCache } from './utils.js';
 import * as date from './dateHandler.js';
 import * as dom from './domHandler.js';
+
 function handleClosedHours() {
 	let localTime = date.localTime;
 	let openingHour = date.localOpeningHour;
@@ -10,10 +11,11 @@ function handleClosedHours() {
 	if (closingHour === null) {
 		dom.showWeAreClosedToday();
 		return;
+		// Show we are closed message if we are outside of working hours (2pm - 9pm)
 	} else if (localTime.hour >= closingHour && localTime.hour < openingHour) {
 		dom.showWeAreClosed();
 		return;
-		// Monday night, restaurant open till thursday
+		// Monday night, restaurant opens untill thursday
 	} else if (localTime.weekday === 1 && localTime.hour >= closingHour) {
 		dom.showWeAreClosedToday();
 		return;
@@ -51,5 +53,4 @@ if (window.location.host === '127.0.0.1:5500' || window.location.host === '192.1
 } else {
 	url = 'https://redwagon-api.herokuapp.com/number';
 }
-// handleClosedHours();
-dom.showWeAreClosedToday();
+handleClosedHours();
