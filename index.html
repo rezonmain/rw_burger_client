@@ -8,14 +8,18 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="#000000" />
 		<link rel="stylesheet" href="css/style.css" />
 		<script type="module" src="js/main.js" defer></script>
+		<script type="module" src="js/dev.js" defer></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/luxon/1.25.0/luxon.min.js"></script>
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" />
 		<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet" />
-		<title>RW - ¿Cuantas burgers quedan hoy?</title>
+		<title>RW - ¿Cuántas burgers quedan hoy?</title>
 	</head>
 	<body class="container">
-		<h1>¿Cuantas burgers quedan hoy?🍔</h1>
+		<h1>
+			¿Cuantas burgers quedan hoy?
+			<span id="burger-button">🍔</span>
+		</h1>
 		<div id="big-container" class="container-frase">
 			<div id="loading" class="loading-container">
 				<div class="lds-ellipsis">
@@ -25,7 +29,7 @@
 					<div></div>
 				</div>
 			</div>
-			<div id="number_container" class="number-container"></div>
+			<div id="number_container" class="number-container"><span id="number_burgers"></span></div>
 			<div id="error_text" class="error-container"></div>
 			<div id="closed_text" class="closed-container"></div>
 			<div id="date_text" class="date-container"></div>
