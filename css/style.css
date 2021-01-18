@@ -710,38 +710,17 @@ h1 {
 	font-family: 'Anton', sans-serif;
 	margin-top: 1rem;
 	text-align: center;
-	align-self: center;
-	justify-self: center;
 	flex-flow: row nowrap;
+	align-items: center;
 	font-family: 'Anton', sans-serif;
 	font-size: 3rem;
-	position: relative;
-}
-
-.numberTag-container > span:last-child {
-	padding-left: 6rem;
+	gap: 14rem;
+	padding-left: 3rem;
 }
 
 .numberTag-container > span:first-child {
-	margin-left: 9rem;
+	height: min-content;
 }
-/* .number-container > span:first-child::before {
-	content: 'Res🥩';
-	font-size: 4rem;
-	vertical-align: top;
-	position: absolute;
-	top: -5rem;
-	left: -1.3rem;
-}
-.number-container > span:last-child::before {
-	content: 'Pollo🍗';
-	font-size: 4rem;
-	vertical-align: top;
-	position: absolute;
-	top: -5rem;
-	width: 16rem;
-	left: 17.5rem;
-} */
 
 .error-container {
 	font-family: Helvetica, sans-serif;
@@ -872,18 +851,17 @@ h1 {
 		margin-bottom: 3rem;
 	}
 	.number-container {
-		gap: 12rem;
+		gap: 7rem;
 		font-size: 5rem;
 	}
 	.numberTag-container {
 		font-size: 2rem;
+		align-items: center;
+		gap: 7rem;
+		padding-left: 1.5rem;
 	}
-	.numberTag-container > span:last-child {
-		padding-left: 7rem;
-	}
-
 	.numberTag-container > span:first-child {
-		margin-left: 5rem;
+		height: min-content;
 	}
 
 	h1 {
