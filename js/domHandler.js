@@ -24,20 +24,30 @@ export function showErrorMessage(error) {
 	document.getElementById('error_text').appendChild(errorSpan);
 }
 export let numberOfBurgers = {
-	numberSpan: document.getElementById('number_burgers'),
+	numberTagContainer: document.getElementById('numberTag_container'),
+	numberBeefSpan: document.getElementById('beef_number'),
+	numberChickenSpan: document.getElementById('chicken_number'),
 	show(data) {
-		let burgerMade = 50 - data.number_burgers;
-		if (burgerMade < 0) {
+		let beefMade = 50 - data.beef;
+		let chickenMade = 50 - data.chicken;
+		if (beefMade < 0) {
 			burgerMade = 0;
 		}
+		if (chickenMade < 0) {
+			chickenMade = 0;
+		}
 		loader.remove();
-		this.numberSpan.style.display = 'block';
-		this.numberSpan.innerText = `${burgerMade}`;
+		this.numberTagContainer.style.display = 'flex';
+		this.numberBeefSpan.style.display = 'block';
+		this.numberChickenSpan.style.display = 'block';
+		this.numberBeefSpan.innerText = `${beefMade}`;
+		this.numberChickenSpan.innerText = `${chickenMade}`;
 		dateStr.show(data.timestamp);
 		showSidenote();
 	},
 	hide() {
-		this.numberSpan.style.display = 'none';
+		this.numberBeefSpan.style.display = 'none';
+		this.numberChickenSpan.style.display = 'none';
 	},
 };
 

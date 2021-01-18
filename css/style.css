@@ -695,14 +695,53 @@ h1 {
 }
 
 .number-container {
-	margin-top: 1rem;
 	text-align: center;
 	display: flex;
 	align-self: center;
 	justify-self: center;
+	flex-flow: row nowrap;
 	font-family: 'Anton', sans-serif;
 	font-size: 6rem;
+	gap: 14rem;
+	position: relative;
 }
+.numberTag-container {
+	display: none;
+	font-family: 'Anton', sans-serif;
+	margin-top: 1rem;
+	text-align: center;
+	align-self: center;
+	justify-self: center;
+	flex-flow: row nowrap;
+	font-family: 'Anton', sans-serif;
+	font-size: 3rem;
+	position: relative;
+}
+
+.numberTag-container > span:last-child {
+	padding-left: 6rem;
+}
+
+.numberTag-container > span:first-child {
+	margin-left: 9rem;
+}
+/* .number-container > span:first-child::before {
+	content: 'Res🥩';
+	font-size: 4rem;
+	vertical-align: top;
+	position: absolute;
+	top: -5rem;
+	left: -1.3rem;
+}
+.number-container > span:last-child::before {
+	content: 'Pollo🍗';
+	font-size: 4rem;
+	vertical-align: top;
+	position: absolute;
+	top: -5rem;
+	width: 16rem;
+	left: 17.5rem;
+} */
 
 .error-container {
 	font-family: Helvetica, sans-serif;
@@ -829,8 +868,22 @@ h1 {
 		cursor: default;
 	}
 	.container-frase {
-		height: 18vh;
+		height: 180px;
 		margin-bottom: 3rem;
+	}
+	.number-container {
+		gap: 12rem;
+		font-size: 5rem;
+	}
+	.numberTag-container {
+		font-size: 2rem;
+	}
+	.numberTag-container > span:last-child {
+		padding-left: 7rem;
+	}
+
+	.numberTag-container > span:first-child {
+		margin-left: 5rem;
 	}
 
 	h1 {
